@@ -91,7 +91,7 @@ const products = [
 ,
 
   {
-    name: 'Fudge Brownie',
+    name: 'Brownie Fudge',
     price: 4.00,
     category: 'pastry',
     image: 'images/brownie.jpeg',
