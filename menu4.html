@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Menu | Brew Haven Café</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="test2.css" />
+  <link rel="stylesheet" href="menu4.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Menu</a></li>
+      <li><a href="index.html#contact">Contact us</a></li>
+      <li><a href="#cart" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <div class="cart-sidebar" id="cart">
+    <button class="close-cart" onclick="toggleCart()">&times;</button>
+    <h3>Your Order</h3>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  </div>
+
+  <a class="back-link" href="index.html">&larr; Back to Home</a>
+
+  <header>
+    <h1>Our Full Menu</h1>
+    <p>Explore our offerings by category</p>
+  </header>
+
+  <section class="category-section" id="cold-drinks">
+    <h2>Cold Drinks</h2>
+    <div class="cards-container" id="cold-drinks-cards"></div>
+  </section>
+
+  <section class="category-section" id="hot-drinks">
+    <h2>Hot Drinks</h2>
+    <div class="cards-container" id="hot-drinks-cards"></div>
+  </section>
+
+  <section class="category-section" id="pastry">
+    <h2>Pastry</h2>
+    <div class="cards-container" id="pastry-cards"></div>
+  </section>
+
+  <script src="menu2.js"></script>
+  <script src="final.js"></script>
+  <script>
+    if(document.getElementById('menu-items')){
+      initMenu();
+    }
+    updateCart();
+  </script>
+</body>
+</html>

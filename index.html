@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew Haven Café</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="test2.css" />
+
+ 
+</head>
+<body>
+  <nav>
+
+    <ul>
+      <li><a href="#home" onclick="refreshPage()">Home</a></li>
+      <li><a href="#menua"   onclick="window.location.href='menu4.html'" >Menu</a></li>
+      <li><a href="#contact"   onclick="scrollToMenu()" >contact us</a></li>
+      
+      <li><a href="#cart" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</a></li>
+      
+
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Brew Haven Café</h1>
+      <p>Artisanal Coffee & Handcrafted Pastries</p>
+     
+     
+    </div>
+  
+  </section>
+  
+  <div class="Welcome  animated-text" >Welcome to Brew Heaven Cafe ☕✨
+
+    Step inside and experience the comforting aroma of freshly brewed coffee, the warmth of friendly faces, and the perfect blend of flavors crafted just for you. Whether you're starting your day with a bold espresso, unwinding with a creamy latte, or catching up with friends over a handcrafted treat, we’re here to make every moment special.
+    
+    Sit back, relax, and let us pour you something wonderful—because great coffee is just the beginning.
+    
+    Sip. Savor. Stay awhile. ☕💛</div>
+
+  <section class="menu-container" id="menu">
+    <h2>Featured on Our Menu</h2>
+    <div class="menu-grid" id="menu-items">
+
+    </div>
+    <div class="gotomenu1">
+
+      <button id="menu-page" onclick="window.location.href='menu4.html'" style="margin-top: 20px; padding: 10px 30px; background: #c7a17a; border: none; border-radius: 5px; cursor: pointer;">Full Menu</button>
+        
+    </div>
+
+    <section class="contact-container" id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, would like to make a reservation, or just want to say hello, please reach out!</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <button type="button" class="call-us-btn" onclick="window.location.href='tel:70000000'">
+        Call Us
+      </button>
+    </section>
+
+
+  </section>
+
+  <div class="cart-sidebar" id="cart">
+    <button class="close-cart" onclick="toggleCart()">&times;</button>
+    <h3>Your Order</h3>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  </div>
+
+
+<script src="final.js"></script>
+</body>
+</html>
